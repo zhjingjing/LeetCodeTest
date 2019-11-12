@@ -1,7 +1,9 @@
-package com.zh.code;
+package com.zh.code.test;
 
 /**
  * create by zj on 2019/7/9
+ *
+ * 最大公约数
  */
 public class CommonDivisor {
 

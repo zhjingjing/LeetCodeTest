@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * create by zj on 2019/7/9
+ * 排序算法
  */
 public class SortTest {
     private static int[] array={2,1,5,4,3,8,7,6};
