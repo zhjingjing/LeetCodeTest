@@ -8,8 +8,9 @@ package com.zh.code.test;
  */
 public class WaterContainer {
     public static void main(String[] arg) {
-        int[] array=new int[]{1,8,6,2,5,4,8,3,7};
+        int[] array=new int[]{1,1};
         System.out.println(getMaxContainer(array));
+        System.out.println(getMaxContainer2(array));
     }
 
 
@@ -20,6 +21,27 @@ public class WaterContainer {
                 int min=Math.min(array[i],array[j]);
                 if (result<min*(j-i)){
                     result=min*(j-i);                }
+            }
+        }
+        return result;
+    }
+
+
+    /**
+     * @param arr
+     * @return
+     * 双指针法
+     */
+    public static int getMaxContainer2(int[] arr){
+        int result=0;
+        int left=0;int right=arr.length-1;
+
+        while (left<right){
+            result=Math.max(result,Math.min(arr[left],arr[right])*(right-left));
+            if (arr[left]<arr[right]){
+                left++;
+            }else {
+                right--;
             }
         }
         return result;
