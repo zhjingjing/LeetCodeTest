@@ -18,5 +18,6 @@ public class FindMedianSortedArrays {
 
     public static void findMedianSortedArrays(int[] array1,int[] array2){
 
+
     }
 }

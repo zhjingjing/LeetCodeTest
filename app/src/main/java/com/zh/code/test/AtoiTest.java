@@ -1,38 +1,34 @@
 package com.zh.code.test;
 
-import java.math.BigInteger;
-
 /**
  * create by zj on 2019/11/14
  * 字符串转换整数
- *
+ * <p>
  * 输入: "42"
  * 输出: 42
- *
+ * <p>
  * 输入: "   -42"
  * 输出: -42
- *
+ * <p>
  * 输入: "4193 with words"
  * 输出: 4193
- *
+ * <p>
  * 输入: "words and 987"
  * 输出: 0（开头是字符，所以无法转换整数）
- *
+ * <p>
  * 输入: "-91283472332"
  * 输出: -2147483648（小于int的最小值，所以转换后为Integer.MIN_VALUE=）
- *
- *
  */
 public class AtoiTest {
 
-    public static void main(String[] args){
-
-        System.out.println(atoi("4193 with words"));
+    public static void main(String[] args) {
+        System.out.println(atoi("-41   11  11  11   "));
     }
 
-    public static int atoi(String str){
+    public static int atoi(String str) {
         if (str == null) return 0;
         str = str.trim();
+        System.out.println(str);
         if (str.length() == 0) return 0;
         int i = 0;
         //2.判断数字的符号
